@@ -77,7 +77,7 @@ export async function transactionRoutes(app: FastifyInstance) {
     let sessionId = req.cookies.sessionId
     if (!sessionId) {
       sessionId = randomUUID()
-      res.setCookie('sessionId', sessionId, {
+      res.cookie('sessionId', sessionId, {
         path: '/',
         maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
       })
