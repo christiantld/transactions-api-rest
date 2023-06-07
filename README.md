@@ -5,6 +5,8 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
+- [Tests](#tests)
+- [Build](#build)
 - [Tools](#tools)
 
 ## About <a name = "about"></a>
@@ -20,6 +22,7 @@ This project is a simple API REST with NodeJS and Fastify. The main objective is
 - Validate schemas with Zod
 - Tests E2E with Vitest and Supertest
 - Work with environment variables with dotenv in NodeJS
+- Setup build scripts
 
 ## Getting Started <a name = "getting_started"></a>
 
@@ -88,6 +91,26 @@ Transactions of type `credit` are transactions that add money to the account. Tr
 
 The `session_id` field is optional. This field is used to identify the user that created the transaction. A user can only see the transactions that he created with his session id.
 
+## Tests <a name = "tests"></a>
+
+To run the tests, you need to run the following command:
+
+```
+npm run test
+```
+
+This command will run the tests in watch mode.
+
+## Build <a name = "build"></a>
+
+To build the application, you need to run the following command:
+
+```
+npm run build
+```
+
+This command will create a `build` folder with the compiled application.
+
 ## Tools <a name = "tools"></a>
 
 - [NodeJS](https://nodejs.org/en/) - JavaScript runtime built on Chrome's V8 JavaScript engine.
@@ -98,3 +121,4 @@ The `session_id` field is optional. This field is used to identify the user that
 - [Zod](https://zod.dev/) - TypeScript-first schema validation with static type inference.
 - [Vitest](https://vitest.dev/) - A simple, fast, and lightweight test runner for Node.js.
 - [Supertest](https://www.npmjs.com/package/supertest) - A library for testing Node.js HTTP servers using a fluent API.
+- [TSUP](https://tsup.egoist.sh/) - Zero config TypeScript bundler powered by esbuild.
